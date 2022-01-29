@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour {
@@ -22,10 +23,11 @@ public class MainMenu : MonoBehaviour {
     void PlayBtnPressed() {
         // TODO: LoadNextScene, using GamaManager
         Debug.Log("Play Button Clicked");
+        SceneManager.LoadScene("Level1");
     }
 
     void QuitBtnPressed() {
-        Application.Quit();
         Debug.Log("Quit Button Clicked");
+        Application.Quit();
     }
 }

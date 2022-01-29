@@ -23,7 +23,7 @@ public class EnemyCombat : MonoBehaviour {
     private void Die() {
         // update UI
         // play die animation
-        Destroy(gameObject, 2f);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

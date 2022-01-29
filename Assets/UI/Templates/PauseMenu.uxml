@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="/Assets/UI/Styles/GameStyle.uss" />
-    <ui:VisualElement name="root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <ui:VisualElement name="root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; visibility: hidden;">
         <ui:Button text="Resume" display-tooltip-when-elided="true" name="resume" class="game-button" />
         <ui:Button text="Restart" display-tooltip-when-elided="true" name="restart" class="game-button" />
         <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="main-menu" class="game-button" />

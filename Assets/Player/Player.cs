@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public float speed;
     public float maxSpeed;
     [Range(0f, 1f)] public float slowDownFactor;
+    private bool isRight = true;
 
     [Header("Jump")]
     public float jumpPower;
@@ -52,16 +53,21 @@ public class Player : MonoBehaviour {
         if (h != 0) {
             rb.AddForce(h * speed * Vector2.right, ForceMode2D.Impulse);
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxSpeed, maxSpeed), rb.velocity.y);
+            isRight = h > 0;
         } else {
             rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, slowDownFactor), rb.velocity.y);
         }
+
+        var rot = transform.rotation;
+        rot.y = isRight ? 0 : 180;
+        transform.rotation = rot;
 
         // check sensors
         isGrounded = Physics2D.OverlapCircleAll(groundSensor.position, groundSensorRadius).Length > 1; // bacause my collider is always counted
         isCeil = Physics2D.OverlapCircleAll(ceilSensor.position, ceilSensorRadius).Length > 1; // bacause my collider is always counted
 
         // jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded && !isCeil) {
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded) {
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
 
