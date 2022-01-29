@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -39,5 +40,11 @@ public class GameManager : MonoBehaviour {
 
     private void OnDisable() {
         player.onPlayerDead -= OnPlayerDead;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Player") {
+            SceneManager.LoadScene("WinScene");
+        }
     }
 }

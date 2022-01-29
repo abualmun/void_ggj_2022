@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1; align-items: flex-start; padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px;">
-        <ui:Button text="Button" display-tooltip-when-elided="true" name="pause" style="height: 150px; width: 150px; padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px;" />
+        <ui:Button text="Pause" display-tooltip-when-elided="true" name="pause" style="height: 150px; width: 150px; padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px; font-size: 24px;" />
+        <ui:Label text="Use W,A,S,D to move&#10;H to attack&#10;J to push&#10;K to pull" display-tooltip-when-elided="true" style="font-size: 57px; color: rgba(255, 255, 255, 255); -unity-text-outline-width: 2px; -unity-font-style: bold; -unity-text-outline-color: rgba(29, 29, 29, 255);" />
     </ui:VisualElement>
 </ui:UXML>

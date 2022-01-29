@@ -7,14 +7,12 @@ public class NormalEnemy : MonoBehaviour {
     public float speed;
     public SpriteRenderer sp;
 
-    private Player player;
     private Vector2 startPoint;
     private Vector2 endPoint;
     private bool moveForward;
     private Rigidbody2D rb;
 
     void Start() {
-        player = Player.player;
         startPoint = transform.Find("sensors/startPoint").position;
         endPoint = transform.Find("sensors/endPoint").position;
 
