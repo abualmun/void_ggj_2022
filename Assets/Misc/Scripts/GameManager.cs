@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public bool didLose = false;
 
     private void OnEnable() {
+        // this is null. why? how to call onEnable and also get static Player.player
+        // player = PlayerCombat.player;
     }
 
     private void Start() {
