@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Force : MonoBehaviour {
 
+    [Tooltip("the explosion power")]
     public float explosionForce;
     public float explosionRadius;
 
@@ -27,7 +28,6 @@ public class Force : MonoBehaviour {
     void Explode(bool push = true) {
 
         foreach (var collider in Physics2D.OverlapCircleAll(transform.position, explosionRadius)) {
-            // Rigidbody2D
             Rigidbody2D rigidbody;
             if (!collider.TryGetComponent<Rigidbody2D>(out rigidbody)) continue;
             if (rigidbody.tag == "Player") continue;
