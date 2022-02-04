@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour {
 
     private void OnPlayerDead() {
         SetPause(true);
-        // show Lose Menu
         didLose = true;
     }
 
