@@ -32,8 +32,14 @@ public class Patrol : MonoBehaviour {
     void Update() {
         if (Vector2.Distance(transform.position, nextPoint) < threshold) {
             transform.position = Vector2.MoveTowards(transform.position, nextPoint, speed);
+            // TODO: change rotation
+            if ((nextPoint - (Vector2)transform.position).x > 0) {
+                // turn right 
+            } else {
+                // turn left
+            }
         } else {
-            index++;
+            index -= -1;
         }
     }
 }
