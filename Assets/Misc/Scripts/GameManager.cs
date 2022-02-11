@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
         player = PlayerCombat.player;
-        player.onPlayerDead += OnPlayerDead;
+        PlayerCombat.onPlayerDead += OnPlayerDead;
     }
 
     private void Update() {
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void OnDisable() {
-        player.onPlayerDead -= OnPlayerDead;
+        PlayerCombat.onPlayerDead -= OnPlayerDead;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

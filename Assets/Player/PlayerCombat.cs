@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class PlayerCombat : MonoBehaviour {
 
     public static PlayerCombat player;
-    public event Action onGotAttacked;
-    public event Action onPlayerDead;
+    public static event Action onGotAttacked;
+    public static event Action onPlayerDead;
 
     public void GotAttacked() {
         if (onGotAttacked != null) {
